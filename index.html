@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            outfit: ['Outfit', 'serif']
+          },
+          colors: {
+            clifford: '#da373d',
+            softBlue: 'hsl(215, 51%, 70%)',
+            cyan: 'hsl(178, 100%, 50%)',
+            cyanLight: 'hsl(178, 100%, 50%, 60%)',
+            veryDarkBlueM: 'hsl(217, 54%, 11%)',
+            veryDarkBlueC: 'hsl(216, 50%, 16%)',
+            veryDarkBlueL: 'hsl(215, 32%, 27%)',
+            white: 'hsl(0, 0%, 100%)'
+          }
+        }
+      }
+    }
+  </script>
+
+
+</head>
+<body class="bg-veryDarkBlueM flex justify-center items-center min-h-screen font-outfit">
+
+  <main class="max-w-sm md:max-w-xs bg-veryDarkBlueC p-4 rounded-lg">
+
+    <div class="mb-4 rounded-xl overflow-hidden relative">
+
+      <img src="images/image-equilibrium.jpg" alt="Equilibrium">
+
+      <div class="bg-cyanLight absolute top-0 w-full h-[calc(100%-1px)] opacity-0 transition-[opacity_0.3s_ease-in-out] hover:opacity-100 cursor-pointer">
+        <div class="absolute top-[50%] left-2/4 transform translate-x-[-50%] translate-y-[-50%]">
+          <img  src="images/icon-view.svg" alt="icon-view">
+        </div>
+
+      </div>
+
+    </div>
+
+    <h1 class="mb-2 text-3xl md:text-lg font-semibold text-white cursor-pointer hover:text-cyan">Equilibrium #3429</h1>
+
+    <p class="mb-4 text-softBlue text-xl md:text-base font-light my-4">Our Equilibrium collection promotes balance and calm.</p>
+
+    <div class="flex justify-between mb-4">
+      <div class="flex items-center">
+        <img class="w-[12px] h-[12px]" src="images/icon-ethereum.svg" alt="icon-ethereum">
+        <p class="pl-1 text-xs text-cyan">0.041 ETH</p>
+      </div>
+
+      <div class="flex items-center">
+        <img class="w-[12px] h-[12px]" src="images/icon-clock.svg" alt="icon-clock">
+        <p class="pl-1 text-xs text-cyan">3 days left</p>
+      </div>
+    </div>
+    <hr class="border-veryDarkBlueL mb-4">
+    <div class="flex items-center mb-4">
+      <img class="w-6 h-6 rounded-full border border-white" src="images/image-avatar.png" alt="image-avatar">
+      <p class="pl-2 text-softBlue text-lg md:text-sm ">Creation of <span class="text-white hover:text-softBlue cursor-pointer">Jules Wyvern</span></p>
+    </div>
+    
+  </main>
+
+  
+</body>
+</html>
